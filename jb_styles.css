@@ -17,31 +17,101 @@
 
 /* Structural Styles */
 html {
-    background-image: url(jb_back1.png);
+    background-image: url(jb_back2.png);
+    /* background-repeat: no-repeat; */
+    background-size: 100%;
 }
-
-/* body>img {} */
 
 /* Navigation Styles */
-nav.horizontal ul li {
-    background-color: rgb(72, 99, 105);
+li{
+    background:rgb(14, 163, 223);
     display: block;
-    float: left;
-    width: 16.66%;
-    font-size: 1.5em;
-    padding:
+
+}
+ul{
+    margin: 0;
+    padding-left:0;
+}
+.submenu{
+    display: none;
+    margin-top: 1em;
+}
+
+nav.horizontal {
+    width: 60%;
+    display: inline;
 
 }
 
-nav.horizontal ul li a {
-    color: white;
+nav.horizontal ul {
+    text-align: center;
+}
+
+nav.horizontal ul li {
+    display: block;
+    width: 16.66%;
+    float: left;
+
+}
+
+nav.horizontal a {
+    color: black;
+}
+
+nav.horizontal ul li a:link,
+nav.horiontal ul li a:visited {
     text-decoration: none;
 }
+
+ul.submenu {
+    display: none;
+    width: 100%;
+}
+
+a:hover+ul,
+ul.submenu:active {
+    display: block;
+}
+
+/* .horizontal {
+    overflow: hidden;
+    background-color: rgb(36, 36, 36);
+    position: fixed;
+    top: 0;
+    width: 100%; 
+}
+
+.horizontal a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.horizontal a:hover,
+.horizontal a:active {
+    background: rgb(243, 243, 243);
+    color: rgb(0, 0, 0);
+}
+
+.horizontal::after {
+    clear: both;
+    display: table;
+    content: "";
+}
+
+.center {
+    margin-top: 45px;
+} */
 
 /* Body Styles */
 article {
     background-color: white;
-    margin: 0 170px 170px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
 }
 
 h1,
@@ -51,10 +121,12 @@ h2 {
 
 article p {
     text-align: center;
-    margin: 0 50px 0 50px;
 }
 
-footer {}
+footer {
+    background-color: rgb(39, 39, 39); 
+    color: white;
+}
 
 /* Flex Styles */
 
