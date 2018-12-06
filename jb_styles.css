@@ -5,8 +5,8 @@
    Tutorial 5
    Case Problem 4
    
-   Author:   
-   Date:       
+   Author:   Caleb Snow
+   Date:     111/30/18
    
    Filename: jb_styles.css
 
@@ -18,21 +18,22 @@
 /* Structural Styles */
 html {
     background-image: url(jb_back2.png);
-    /* background-repeat: no-repeat; */
-    background-size: 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
 
 /* Navigation Styles */
-li{
-    background:rgb(14, 163, 223);
+li {
+    background: rgb(14, 163, 223);
     display: block;
+}
 
-}
-ul{
+ul {
     margin: 0;
-    padding-left:0;
+    padding-left: 0;
 }
-.submenu{
+
+.submenu {
     display: none;
     margin-top: 1em;
 }
@@ -40,7 +41,7 @@ ul{
 nav.horizontal {
     width: 60%;
     display: inline;
-
+    font-family: cursive;
 }
 
 nav.horizontal ul {
@@ -51,6 +52,7 @@ nav.horizontal ul li {
     display: block;
     width: 16.66%;
     float: left;
+    box-shadow: rgb(0, 0, 0) 10px 10px 10px;
 }
 
 nav.horizontal a {
@@ -68,6 +70,11 @@ ul.submenu {
     position: absolute;
 }
 
+ul.submenu a li {
+    border-color: black;
+    border: 3px;
+}
+
 .submenu li {
     clear: both;
     width: 100%;
@@ -78,50 +85,78 @@ ul.submenu:active {
     display: block;
 }
 
-/* .horizontal {
-    overflow: hidden;
-    background-color: rgb(36, 36, 36);
-    position: fixed;
-    top: 0;
-    width: 100%; 
-}
-
-.horizontal a {
-    float: left;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-.horizontal a:hover,
-.horizontal a:active {
-    background: rgb(243, 243, 243);
-    color: rgb(0, 0, 0);
-}
-
-.horizontal::after {
-    clear: both;
-    display: table;
-    content: "";
-}
-
-.center {
-    margin-top: 45px;
-} */
-
 /* Body Styles */
 article {
-    background-color: white;
     margin-left: auto;
     margin-right: auto;
     width: 60%;
 }
 
-h1,
+article section {
+    background: url(jb_back3.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+article>section#info {
+    box-shadow: rgb(0, 0, 0) 10px 10px 10px;
+    margin-top: 50px;
+    padding-bottom: 30px;
+}
+
+article>section#info p {
+    background-color: white;
+    font-family: cursive;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-left: 60px;
+    margin-right: 60px;
+    border: outset rgb(0, 0, 0) 7px;
+}
+
+article>section#info h1 {
+    font-size: 1.5em;
+    font-family: cursive;
+    text-align: center;
+    margin-left: 250px;
+    margin-right: 250px;
+    border: outset rgb(0, 0, 0) 7px;
+    background-color: white;
+}
+
+article>section#slang {
+    box-shadow: rgb(0, 0, 0) 10px 10px 10px;
+
+}
+
+article>section#slang p {
+    background-color: white;
+    font-size: 1.5em;
+    font-family: cursive;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-bottom: 30px;
+    margin-left: 130px;
+    margin-right: 130px;
+    border: outset rgb(0, 0, 0) 7px;
+}
+
+article>section#slang h1 {
+    font-size: 2em;
+    font-family: cursive;
+    text-align: center;
+    margin-left: 250px;
+    margin-right: 250px;
+    text-decoration-line: underline;
+}
+
 h2 {
     text-align: center;
+    font-family: cursive;
+    margin-left: 250px;
+    margin-right: 250px;
+    border: outset rgb(0, 0, 0) 7px;
+    background-color: white;
 }
 
 article p {
@@ -129,8 +164,21 @@ article p {
 }
 
 footer {
-    background-color: rgb(39, 39, 39); 
+    background-color: rgb(39, 39, 39);
     color: white;
+    width: 100%;
+    text-align: center;
+}
+
+footer a {
+    text-decoration: none;
+    color: red;
+    margin-left: 10px;
+}
+
+footer a:hover,
+footer a:active {
+    color: rgb(25, 0, 255);
 }
 
 /* Flex Styles */
@@ -138,4 +186,76 @@ footer {
 
 /* Mobile Styles */
 
-@media only screen and (max-width: 480px) {}
+@media only screen and (max-width: 480px) {
+    nav.horizontal {
+        order: 1;
+    }
+
+    article {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    article>section#info {
+        order: 2;
+    }
+
+    article>section#slang {
+        order: 3;
+    }
+
+    article>section#slang h1 {
+        padding: 5px 50px 5px 60px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    article>section#info h1 {
+        text-align: left;
+        padding: 5px 50px 5px 60px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    article>section#slang h2 {
+        padding: 5px 50px 5px 60px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    article>section#info h2 {
+        padding: 5px 50px 5px 60px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    article>section#slang p {}
+
+    article>section#info p {}
+
+}
+
+}
+
+/* Tablet Styles */
+
+@media only screen and (min-width: 481px) {
+    article {
+        width: 80%;
+    }
+
+    article>section#slang h1 {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    article>section#info h1 {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* Desktop Styles */
+
+@media only screen and (min-width: 769px) {}
