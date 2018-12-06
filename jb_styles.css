@@ -16,6 +16,8 @@
 */
 
 /* Structural Styles */
+/* This HTML selector uses a given image and situates it to perfectly align 
+with the websites design and size */
 html {
     background-image: url(jb_back2.png);
     background-repeat: no-repeat;
@@ -23,6 +25,9 @@ html {
 }
 
 /* Navigation Styles */
+
+/* These li and ul selectors give the sizing needed to each element selected 
+as well as a background color to the list styles */
 li {
     background: rgb(14, 163, 223);
     display: block;
@@ -33,11 +38,15 @@ ul {
     padding-left: 0;
 }
 
+/* The submenu class is used to identify the certain navigation elements for
+ each category that has other subjects included within them  */
 .submenu {
     display: none;
     margin-top: 1em;
 }
 
+/* These navigational styles with the class of horizontal are what gives 
+the main menu its design and look on the page */
 nav.horizontal {
     width: 60%;
     display: inline;
@@ -59,11 +68,17 @@ nav.horizontal a {
     color: black;
 }
 
+/* This specific navigational selector with the visited and link attributes 
+are used to show when you have visited a certain directory from where 
+ever you start at (root directory) */
 nav.horizontal ul li a:link,
 nav.horiontal ul li a:visited {
     text-decoration: none;
 }
 
+/* These sub menu classes paired with which ever combonation of ul li and a 
+or even separate are what gives the nav bar some design and more special 
+look to it */
 ul.submenu {
     display: none;
     width: 100%;
@@ -86,6 +101,9 @@ ul.submenu:active {
 }
 
 /* Body Styles */
+
+/* These article styles are used to specialize what each article looks which 
+way to have some diversity to the website */
 article {
     margin-left: auto;
     margin-right: auto;
@@ -98,12 +116,16 @@ article section {
     background-size: 100% 100%;
 }
 
+/* All of these article selectors are paired with their direct child of a section
+ element which either has an id of info or slang depending on what section 
+ of the article element you are trying to effect */
 article>section#info {
     box-shadow: rgb(0, 0, 0) 10px 10px 10px;
     margin-top: 50px;
     padding-bottom: 30px;
 }
 
+/*Also sometimes accompanied by a paragraph, h1, or h2 selector on the end to effect those specific elements in which ever section of the article */
 article>section#info p {
     background-color: white;
     font-family: cursive;
@@ -150,6 +172,8 @@ article>section#slang h1 {
     text-decoration-line: underline;
 }
 
+/* These are styles to effect all h2's, all paragraph tags emmbedded in
+ article tags in the HTML  */
 h2 {
     text-align: center;
     font-family: cursive;
@@ -163,6 +187,8 @@ article p {
     text-align: center;
 }
 
+/* These footer styles are used to specify how the links within the footer 
+react to the user and some basic styling to go with them  */
 footer {
     background-color: rgb(39, 39, 39);
     color: white;
@@ -181,11 +207,10 @@ footer a:active {
     color: rgb(25, 0, 255);
 }
 
-/* Flex Styles */
-
-
 /* Mobile Styles */
 
+/* These mobile styles are used to make sure all of the page content 
+fits into the web page itself  */
 @media only screen and (max-width: 480px) {
     nav.horizontal {
         order: 1;
@@ -230,16 +255,14 @@ footer a:active {
         margin-left: auto;
     }
 
-    article>section#slang p {}
-
-    article>section#info p {}
-
 }
 
 }
 
 /* Tablet Styles */
 
+/* These are the tablet styles which were used to provide a sort of balance
+ between Desktop and Mobile styles */
 @media only screen and (min-width: 481px) {
     article {
         width: 80%;
@@ -258,4 +281,7 @@ footer a:active {
 
 /* Desktop Styles */
 
+/* I used this media query to just act as a boundary for the Tablet styles
+ to not cross since I built the Desktop styles first with HTML 
+ instead of doing best practice and starting from mobile   */
 @media only screen and (min-width: 769px) {}
